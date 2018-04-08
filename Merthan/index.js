@@ -124,7 +124,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("**Sosial Mediam :**\n\n Youtube : https://www.youtube.com/channel/UC4TtSN-4F3M9gkhiyLBaGLA\nInstagram : https://www.instagram.com/merthanbey007/\nTwitch : https://www.twitch.tv/merthanbeyz");
+				message.reply("**Sosyal Mediam :**\n\n Youtube : https://www.youtube.com/channel/UC4TtSN-4F3M9gkhiyLBaGLA\nInstagram : https://www.instagram.com/merthanbey007/\nTwitch : https://www.twitch.tv/merthanbeyz");
 			}
 		}
 	}
