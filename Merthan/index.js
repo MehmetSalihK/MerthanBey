@@ -1,4 +1,4 @@
-const CLEAR_MESSAGES = '&sil';
+const CLEAR_MESSAGES = '!sil';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
@@ -124,7 +124,37 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("**Sosyal Mediam :**\n\n Youtube : https://www.youtube.com/channel/UC4TtSN-4F3M9gkhiyLBaGLA\nInstagram : https://www.instagram.com/merthanbey007/\nTwitch : https://www.twitch.tv/merthanbeyz");
+				message.reply("**Sosial Mediam :**\n\n Youtube : https://www.youtube.com/channel/UC4TtSN-4F3M9gkhiyLBaGLA\nInstagram : https://www.instagram.com/merthanbey007/\nTwitch : https://www.twitch.tv/merthanbeyz");
+			}
+		}
+	}
+});
+
+bot.on("message", (message) => {
+	
+	/*
+		Object message :
+		
+		- mentions.users = utilisateurs mentionnés
+		- author.username = auteur du message
+		- content = contenu du message
+		- createdTimestamp = timestamp du message
+		- member.guild.name = nom du serveur
+		- channel.name = nom du topic
+		- channel.topic = description du topic
+		- channel.guild.roles = rôles sur le serveur
+	*/
+	
+	if(message.content.substring(0, 7) == "&kr")
+	{
+		var commande = message.content.split(" ");
+		
+		if(typeof commande[1] === 'undefined')
+		{
+			if(message.author.bot === false)
+			{
+				// Nom d'utilisateur pas entré = afficher l'aide
+				message.reply("__***:x:KURALLAR:x:***__ \n\n 1- Küfür ne kadar az olursa o kadar memnun oluruz.\n2- Her hangi bir kanal veya discord reklamı yasaktır.\n3- Kavgalarınızı özelden yapınız.\n4- Cinsel, kan, vahşet içerikli paylaşımlar yasak.\n4- Din, dil, ırk ve siyaset içerikli konular kesinlikle yasaktır.\n5- Spam ve flood yasak.\n6- Kullanıcı Limiti olan odaları tek başınıza girerek meşgul etmeyin, AFK olarak kullanmayın.\n\nVE BURDAN __ParisdekiBebeg__'YE TEŞEKKÜR EDERIM BENI CODLADI IÇIN");
 			}
 		}
 	}
