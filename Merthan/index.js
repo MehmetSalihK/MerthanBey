@@ -1,4 +1,4 @@
-const CLEAR_MESSAGES = '!sil';
+const CLEAR_MESSAGES = '&sil';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
