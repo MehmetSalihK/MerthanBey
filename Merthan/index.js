@@ -97,7 +97,7 @@ bot.on("message", function(message) {
 });
 
 bot.on("ready", () => {
-	console.log("Bot démarré");
+	console.log("Geldim");
 });
 
 bot.on("message", (message) => {
@@ -115,7 +115,7 @@ bot.on("message", (message) => {
 		- channel.guild.roles = rôles sur le serveur
 	*/
 	
-	if(message.content.substring(0, 7) == "!report")
+	if(message.content.substring(0, 7) == "&sm")
 	{
 		var commande = message.content.split(" ");
 		
@@ -124,141 +124,7 @@ bot.on("message", (message) => {
 			if(message.author.bot === false)
 			{
 				// Nom d'utilisateur pas entré = afficher l'aide
-				message.reply("**Rapor siparişi için yardım :** \n\n Uygunsuz davranışa sahip bir veya daha fazla kullanıcıyı rapor etmek için, rapor komutundan sonra kullanıcıların adını veya adlarını koyun. \n\n Nitelikle belirli bir nedeni de ekleyebilirsiniz `-r:\"Senin sebebin\"`. \n\n Bu komutu tamamen kötüye ve dalgaya kullanmayın, teşekkürler :wink: ! \n\n **örnek 1 :** `!report @user` \n **örnek 2 :** `!report @user1 @user2` \n **örnek 3 :** `!report @user1 -r:\"Bir sebep\"`");
-			}
-		}
-		else
-		{
-			// Vérifier les noms + raison de signalement
-			var verifNom = true;
-			var raisonSignalement = null;
-			var inOptionRaison = false;
-			
-			for(var i = 1; i < commande.length; i++)
-			{
-				// Les noms des personnes citées commencent par "<", le caractère suivant étant @
-				if(commande[i].charAt(1) !== "@")
-				{
-					// On ne prend pas en compte l'option -r (raison)
-					if(commande[i].substring(0, 4) == "-r:\"")
-					{
-						raisonSignalement = commande[i].substring(3);
-						inOptionRaison = true;
-					}
-					else
-					{
-						if(inOptionRaison == false)
-						{	
-							verifNom = false;
-						}
-						else
-						{
-							raisonSignalement = raisonSignalement + " " + commande[i];
-						}
-					}
-				}
-			}
-			
-			if(verifNom === true)
-			{
-				// Vérification des abus
-				var aAppele = false;
-				for(var i = 0; i < dernierAppel.length; i++)
-				{
-					if(dernierAppel[i][0] == message.author.id)
-					{
-						// Un signalement toutes les 3 minutes autorisé
-						if((message.createdTimestamp - dernierAppel[i][1]) < 180000)
-						{
-							aAppele = true;
-						}
-						else
-						{
-							aAppele = false;
-							dernierAppel.splice(i, 1);
-						}
-					}
-				}
-				
-				if(aAppele == false)
-				{
-					dernierAppel.push([message.author.id, message.createdTimestamp]);
-					
-					var moderateurs = new Array();
-					
-					var sontAvertis = true;
-					
-					message.channel.guild.roles.forEach(function(role)
-					{
-						// Chercher les modérateurs parmi tous les rôles
-						
-						if (role.hasPermission('BAN_MEMBERS'))
-						{
-							role.members.forEach(function(member)
-							{
-								var estDejaPrevenu = false;
-								for(var j = 0; j < moderateurs.length; j++)
-								{
-									if(member == moderateurs[j])
-									{
-										// Est déjà prévenu
-										estDejaPrevenu = true;
-									}
-								}
-									
-								if(estDejaPrevenu == false)
-								{
-									moderateurs.push(member);
-								
-									// Fonction conversion timestamp -> Date
-									function timeConverter(timestamp)
-									{
-										var a = new Date(timestamp);
-										var tabMois = ['Ocak.','Şubat.','Mart','Nisan.','Mais.','Haziran','Temmuz.','Ağustos','Eylül.','Ekim.','Kasım.','Aralık.'];
-										var yıl = a.getFullYear();
-										var ay = tabMois[a.getMonth()];
-										var tarih = a.getDate();
-										var saat = a.getHours();
-										var dakika = a.getMinutes();
-										var saniye = a.getSeconds();
-										var time = "le " + tarih + ' ' + ay + ' ' + yıl + ' à ' + saat + 'h' + dakika + ':' + saniye ;
-										return time;
-									}
-									
-									// Reporter les utilisateurs
-									var MP = "Gönderilen bir rapor " + timeConverter(message.createdTimestamp) + " tarafından **" + message.author.username + "** karşı yapıldı ";
-									
-									message.mentions.users.forEach(function(user)
-									{
-										MP = MP + "@" + user.username + " ";
-									});
-									
-									MP =  MP + "üzerinde *" + member.guild.name + "/" + message.channel.name + "*";
-									
-									// Prise en charge de la raison du signalement
-									if(raisonSignalement != null)
-									{
-										MP = MP + " aşağıdaki sebepten dolayı : *" + raisonSignalement + "*";
-									}
-									
-									try
-									{
-										member.user.sendMessage(MP);
-									}
-									catch(e)
-									{
-										sontAvertis = false;
-									}
-								}
-							});
-						}
-					});
-					
-					if(sontAvertis == true)
-					{
-						message.reply("Raporlama bitti :wink: !");
-					}
-				}
+				message.reply("**Sosial Mediam :**\n\n Youtube : https://www.youtube.com/channel/UC4TtSN-4F3M9gkhiyLBaGLA\nInstagram : https://www.instagram.com/merthanbey007/\nTwitch : https://www.twitch.tv/merthanbeyz");
 			}
 		}
 	}
@@ -307,46 +173,6 @@ bot.on("message", function(message) {
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
-    if (message.content == "INTERNET") {
-        message.reply("Youtube :  Instagram :  Snapchat :  Twitch :  Facebook Groupe :  Discord :  LFN TeamSpeak : ");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "Coucou") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "coucou") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "CC") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "cc") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
-    }
-});
-
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
     if (message.content == "welcome") {
         message.reply("Welcome To Do LesFamilles NDNG. :)");
     }
@@ -360,13 +186,6 @@ bot.on("message", function(message) {
     }
 });
 
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (message.content == "régle") {
-        message.reply("Les demandes de votre part: 1. Moins la malédiction, plus nous sommes heureux. 2.Faites vos repères en particulier. 3.Faites vos repères en particulier. 4. Toute annonce de chaîne ou de discord est interdit. 5. Le partage sexuel, de sang, de sauvagerie est interdit. 6. La vente / l'échange de comptes de jeux, de souvenirs, de matériel de jeu, etc., et le partage de liens de référence sont interdits. 7. La religion, la langue, la race et la politique sont strictement interdites. 8. Les spams et les inondations sont interdits.");
-    }
-});
 
 bot.on("guildMemberAdd", function(member) {
     member.guild.channels.find("name", "HOŞGELDİNİZ").sendMessage(member.toString() + " NASIL YARDIMCI OLA BILIRIM SIZE!");
@@ -430,7 +249,7 @@ bot.on("message", function(message) {
             }
 
             if (!message.member.voiceChannel) {
-                message.channel.sendMessage("Vous devez être dans The Voice :)");
+                message.channel.sendMessage("Botu carmak icin odaya girin!");
                 return;
             }
 
@@ -455,7 +274,7 @@ bot.on("message", function(message) {
             var server = servers[message.guild.id];
             break;
         default:
-            message.channel.sendMessage("NE DEDINIZI ANLAMADIM!")
+            message.channel.sendMessage("")
         }
     });
 
