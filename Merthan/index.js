@@ -1,4 +1,4 @@
-const CLEAR_MESSAGES = '&sil';
+const CLEAR_MESSAGES = '!sil';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
@@ -433,7 +433,22 @@ bot.on("message", function(message) {
         message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
     }
 
-    if (message.content == "Kafalı") {
+    if (message.content == "amq") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AMQ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AmQ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "aMq") {
         message.delete (30);
         message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
     }
