@@ -392,6 +392,51 @@ bot.on("message", function(message) {
         message.delete (30);
         message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
     }
+
+    if (message.content == "OROSBU ÇOCUGU") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "KAFALI") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "TS") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "KAFA") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "kafa") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "kafa") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Kafa") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "kafalı") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Kafalı") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
 });
 
 bot.on("message", function(message) {
