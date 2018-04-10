@@ -332,6 +332,66 @@ bot.on("message", function(message) {
         message.delete (30);
         message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
     }
+
+    if (message.content == "oc") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "OC") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Oc") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "amcık") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Amcık") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AMCIK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "OROSBU ÇOCUGU") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "OROSPU") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Orospu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "orospu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yrrak") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yarrakl") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
 });
 
 bot.on("message", function(message) {
