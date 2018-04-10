@@ -163,8 +163,183 @@ bot.on("message", (message) => {
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
+    if (message.content == "amk") {
+	message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+    
+    if (message.content == "AMK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AMk") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "aMK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AmK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "aMk") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AmK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "aq") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AQ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Aq") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "aQ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Sikerim") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "sikerim") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Oruspu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "oruspu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "oç") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Oç") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "OÇ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "AMINA") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Yarrak") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yarrak") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "SQ") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "sq") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "orosbçocuğu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "oorroossbbuuççooccuugguu") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "YARAK") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yarak") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "YARAGM") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yaragm") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "YALLA") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yalla") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "YALA") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "yala") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+
+    if (message.content == "Yala") {
+        message.delete (30);
+        message.reply(":rage:KÜFÜR ETME LAN:rage:").then(d_msg => { d_msg.delete(3000); });
+    }
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
     if (message.content == "merhaba") {
-        message.reply(":star:MERHABA MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:");
+	message.delete (3000);
+        message.reply(":star:MERHABA MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -172,7 +347,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Selam") {
-        message.reply(":star:ALEYKUM SELAM MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:");
+	message.delete (3000);
+        message.reply(":star:ALEYKUM SELAM MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -180,7 +356,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "selam") {
-        message.reply(":star:ALEYKUM SELAM MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:");
+	message.delete (3000);
+        message.reply(":star:ALEYKUM SELAM MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -188,7 +365,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Sa") {
-        message.reply(":star:AS MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:");
+	message.delete (3000);
+        message.reply(":star:AS MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -196,7 +374,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "sa") {
-        message.reply(":star:AS MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:");
+	message.delete (3000);
+        message.reply(":star:AS MERTHAN BEY SUNUCUSUNA HOŞGELDİNİZ:star:").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -204,7 +383,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "welcome") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+	message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
@@ -212,7 +392,8 @@ bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
 
     if (message.content == "Welcome") {
-        message.reply("Welcome To Do LesFamilles NDNG. :)");
+	message.delete (3000);
+        message.reply("Welcome To Do LesFamilles NDNG. :)").then(d_msg => { d_msg.delete(3000); });
     }
 });
 
