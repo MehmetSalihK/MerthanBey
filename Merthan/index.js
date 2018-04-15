@@ -34,7 +34,7 @@ var bot = new Discord.Client();
 
 var servers = {};
 
-const CLEAR_MESSAGES = '-cc';
+const CLEAR_MESSAGES = '&sil';
 
 bot.on('ready', () => {
     console.log('Je susi prêt à éffacer les messages!');
