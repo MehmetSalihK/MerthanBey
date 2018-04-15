@@ -34,6 +34,48 @@ var bot = new Discord.Client();
 
 var servers = {};
 
+const CLEAR_MESSAGES = '-cc';
+
+bot.on('ready', () => {
+    console.log('Je susi prêt à éffacer les messages!');
+    bot.on('message', message => {
+      if (message.content == CLEAR_MESSAGES) {
+  
+        // Check the following permissions before deleting messages:
+        //    1. Check if the user has enough permissions
+        //    2. Check if I have the permission to execute the command
+  
+        if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
+          message.channel.sendMessage("Üzgünüz, komutu yürütme izniniz yok \""+message.content+"\"");
+          console.log("Üzgünüz, komutu yürütme izniniz yok \""+message.content+"\"");
+          return;
+        } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
+          message.channel.sendMessage("Üzgünüm, komutu yürütme iznim yok \""+message.content+"\"");
+          console.log("Üzgünüm, komutu yürütme iznim yok \""+message.content+"\"");
+          return;
+        }
+  
+        // Only delete messages if the channel type is TextChannel
+        // DO NOT delete messages in DM Channel or Group DM Channel
+        if (message.channel.type == 'text') {
+          message.channel.fetchMessages()
+            .then(messages => {
+              message.channel.bulkDelete(messages);
+              messagesDeleted = messages.array().length; // number of messages deleted
+  
+              // Logging the number of messages deleted on both the channel and console.
+              message.channel.sendMessage("Mesajları başarılı bir şekilde silme. Toplam silinen mesaj sayısı: "+messagesDeleted).then(d_msg => { d_msg.delete(3000); });
+              console.log('Mesajları başarılı bir şekilde silme. Toplam silinen mesaj sayısı: '+messagesDeleted).then(d_msg => { d_msg.delete(3000); });
+            })
+            .catch(err => {
+              console.log('Toplu silme sırasında hata oluştu');
+              console.log(err);
+            });
+        }
+      }
+    });
+  });
+
 client.on('ready', () => {
     bot.user.setGame("MerthanBeyBotu");
     console.log(`${client.user.tag} HOŞGELDİN KARDAŞ!`);
