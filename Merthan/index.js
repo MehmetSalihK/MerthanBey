@@ -1,4 +1,3 @@
-const CLEAR_MESSAGES = '!sil';
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const YTDL = require("ytdl-core");
@@ -39,46 +38,6 @@ client.on('ready', () => {
     bot.user.setGame("MerthanBeyBotu");
     console.log(`${client.user.tag} HOŞGELDİN KARDAŞ!`);
   });
-  
-bot.on('ready', () => {
-  console.log('Mesajları Temizleye Hazırım!');
-  bot.on('message', message => {
-    if (message.content == CLEAR_MESSAGES) {
-
-      // Check the following permissions before deleting messages:
-      //    1. Check if the user has enough permissions
-      //    2. Check if I have the permission to execute the command
-
-      if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Üzgünüm, komutu yürütme izniniz yok \""+message.content+"\"");
-        console.log("Üzgünüm, komutu yürütme izniniz yok \""+message.content+"\"");
-        return;
-      } else if (!message.channel.permissionsFor(bot.user).hasPermission("MANAGE_MESSAGES")) {
-        message.channel.sendMessage("Üzgünüm, komutu yürütme iznim yok \""+message.content+"\"");
-        console.log("Üzgünüm, komutu yürütme iznim yok \""+message.content+"\"");
-        return;
-      }
-
-      // Only delete messages if the channel type is TextChannel
-      // DO NOT delete messages in DM Channel or Group DM Channel
-      if (message.channel.type == 'text') {
-        message.channel.fetchMessages()
-          .then(messages => {
-            message.channel.bulkDelete(messages);
-            messagesDeleted = messages.array().length; // number of messages deleted
- 
-            // Logging the number of messages deleted on both the channel and console.
-            message.channel.sendMessage("Mesajların başarılı bir şekilde silinmesi. Toplam mesaj silindi: "+messagesDeleted);
-            console.log('Mesajların başarılı bir şekilde silinmesi. Toplam mesaj silindi: '+messagesDeleted)
-          })
-          .catch(err => {
-            console.log('Toplu Silme yapılırken hata oluştu');
-            console.log(err);
-          });
-      }
-    }
-  });
-});
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
