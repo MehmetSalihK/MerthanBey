@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const YTDL = require("ytdl-core");
 
-const TOKEN = "NDU4NzgxMTM0NzMwNDI4NDE2.Dg5_dw.fo9JIfzMNOKSeDA3iIO4pYA3Ovo";
+const TOKEN = "NDU5MjUzNjYyMTEyNDE1NzQ0.DhaUpQ.I-PUysuRONGghc7jJBznVrphps8";
 const ownerID = "174565176492687361"
 const PREFIX = "-";
 
